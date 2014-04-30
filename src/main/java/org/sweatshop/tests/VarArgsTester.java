@@ -19,6 +19,16 @@ public class VarArgsTester {
     }
     
     
+    private static String listOfArgs(int first, int... args) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(first);
+        for (int arg: args) {
+            sb.append(",").append(arg);
+        }
+        
+        return sb.toString();
+    }
+    
     public static void main(String[] args) {
         printVarArgs("foo", "bar", "baz");
         printVarArgs("foo", "bar");
@@ -28,5 +38,9 @@ public class VarArgsTester {
         printVarArgs((String)null, (String)null);
         printVarArgs("foo", null, "baz");
         printVarArgs("foo", "bar", null);
+        
+        
+        System.out.println(listOfArgs(1));
+        System.out.println(listOfArgs(1,2,3,4));
     }
 }
