@@ -34,14 +34,6 @@ public class Java8Tester {
     }
 
     public static void main(String[] args) {
-        List<Integer> list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.replaceAll(i -> i*i);
-        list.add(3);
-        System.out.println(list);
-        
-        
         forEachTester();System.out.println();
         filterTester();System.out.println();
         mapTester();System.out.println();
