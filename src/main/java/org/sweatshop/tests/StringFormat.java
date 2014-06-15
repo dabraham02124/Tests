@@ -6,7 +6,11 @@ public class StringFormat {
         int foo = 15;
         System.out.println(String.format("this is an int as string %s",foo));
         System.out.println(String.format("this is an int as int    %d",foo));
-        
+        System.out.println(String.format("this is a null %s", returnNull()));
+    }
+    
+    private static Object returnNull() {
+        return null;
     }
 
 }
