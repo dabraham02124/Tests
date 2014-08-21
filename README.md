@@ -7,3 +7,7 @@ Requirements
 ------------
 * Maven to build
 * Java 8 for (at the moment) one file
+
+Building
+--------
+     mvn clean compile test
