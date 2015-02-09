@@ -14,8 +14,8 @@ public class RegexpTester {
         check("search?", "search");
         check("search?", "searchh");
         check("search?\\w+", "searchhhh");
-        check("search?\\w+", (String)null);
-
+//        check("search?\\w+", (String)null);  //throws an NPE in java.util.regex.Matcher.getTextLength(Matcher.java:1234)
+        check("/v\\d+.\\d+/foo/\\*/bar", "/v0.3/foo/*/bar");
     }
 
     private static void check(String regexp, String... testStrings) {

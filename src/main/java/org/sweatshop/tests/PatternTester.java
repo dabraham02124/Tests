@@ -32,6 +32,7 @@ public class PatternTester {
     public static void main(String[] args) {
         
         showMatching("cps", "cps");
+        showMatching("cps", null);
         showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/");
         showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/fafhFFD35dF");
         showMatching("/cps/v\\d\\.\\d/context/\\w+/subscription/\\w*", "/cps/v0.1/context/fafhFFD35dF/subscription/");
