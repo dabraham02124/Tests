@@ -6,6 +6,7 @@ public class AutoBoxing {
         System.out.println(bar);
     }
     
+    @SuppressWarnings("null")
     public static void main(String[] args) {
         foo((Integer) null);
     }
