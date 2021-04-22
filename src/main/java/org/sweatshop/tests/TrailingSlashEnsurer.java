@@ -21,7 +21,7 @@ public class TrailingSlashEnsurer {
         System.out.println(ensureTrailingSlash(""));
         System.out.println(ensureTrailingSlash("/"));
         System.out.println(ensureTrailingSlash("f"));
-        System.out.println(ensureTrailingSlash(" "));;
+        System.out.println(ensureTrailingSlash(" "));
         System.out.println(ensureTrailingSlash("foo"));
         System.out.println(ensureTrailingSlash("foo/"));
         System.out.println(ensureTrailingSlash("foo/bar"));

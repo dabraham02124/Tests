@@ -10,7 +10,7 @@ public class MethodCasting {
     }
     
     private static class Bar extends Foo {
-        public String getString() { return "Bar";}
+        @Override public String getString() { return "Bar";}
     }
     
     public static void main(String[] args) {

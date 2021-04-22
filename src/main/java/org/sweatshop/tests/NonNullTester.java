@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.sun.istack.internal.NotNull;
-
 import lombok.NonNull;
 import lombok.val;
 
@@ -35,7 +33,7 @@ public class NonNullTester {
 //        System.out.println(getNull(null));
     }
 
-    @NotNull private static String getNull(@NonNull String foo) {
+    @NonNull private static String getNull(@NonNull String foo) {
         return null;
     }
 

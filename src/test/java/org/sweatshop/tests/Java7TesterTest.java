@@ -3,7 +3,7 @@ package org.sweatshop.tests;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import org.sweatshop.tests.Java7Tester;
+//import org.sweatshop.tests.Java7Tester;
 import org.testng.annotations.Test;
 
 public class Java7TesterTest {

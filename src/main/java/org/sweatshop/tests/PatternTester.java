@@ -1,5 +1,6 @@
 package org.sweatshop.tests;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PatternTester {
@@ -31,13 +32,21 @@ public class PatternTester {
     
     public static void main(String[] args) {
         
+        
+        Pattern digits = Pattern.compile("(\\d+).*");
+        Matcher m = digits.matcher("123_foo");
+        
+        System.out.println(m.matches());
+        System.out.println(m.group(1));
+
+        
         showMatching("cps", "cps");
-        showMatching("cps", null);
-        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/");
-        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/fafhFFD35dF");
-        showMatching("/cps/v\\d\\.\\d/context/\\w+/subscription/\\w*", "/cps/v0.1/context/fafhFFD35dF/subscription/");
-        showMatching("/cps/v\\d\\.\\d/context/\\w+/subscription/\\w*", "/cps/v0.1/context/fafhFFD35dF/subscription/gsdfRRRA453H");
-        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/123");
+////        showMatching("cps", null);
+//        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/");
+//        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/fafhFFD35dF");
+//        showMatching("/cps/v\\d\\.\\d/context/\\w+/subscription/\\w*", "/cps/v0.1/context/fafhFFD35dF/subscription/");
+//        showMatching("/cps/v\\d\\.\\d/context/\\w+/subscription/\\w*", "/cps/v0.1/context/fafhFFD35dF/subscription/gsdfRRRA453H");
+//        showMatching("/cps/v\\d\\.\\d/context/\\w*", "/cps/v0.1/context/123");
     }
 
 }

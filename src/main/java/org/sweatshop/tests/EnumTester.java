@@ -7,7 +7,7 @@ public class EnumTester {
         BETA,
         GAMMA;
         
-        public String toString() {
+        @Override public String toString() {
             return "aooga";
         }
     }
