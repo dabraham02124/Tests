@@ -14,11 +14,11 @@ import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 public class MavenReaderTest {
-    
+
     public static void main(String[] args) throws FileNotFoundException, IOException, XmlPullParserException {
         readMavenFile();
     }
-    
+
     public static void readMavenFile() throws FileNotFoundException, IOException, XmlPullParserException {
         MavenXpp3Reader mavenReader = new MavenXpp3Reader();
 
@@ -33,6 +33,6 @@ public class MavenReaderTest {
         for (Dependency d: deps) {
             System.out.println(format("%s:%s:%s",d.getGroupId(), d.getArtifactId(), d.getVersion()));
         }
-        
+
     }
 }

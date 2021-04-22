@@ -9,13 +9,13 @@ public class ArrayListTester {
         List<String> list = new ArrayList<>(20);
 
         printList(list);
-        
+
         list.add("foo");
         list.add("foo");
         list.add("foo");
         list.add("foo");
         list.add("foo");
-        
+
         printList(list);
     }
 

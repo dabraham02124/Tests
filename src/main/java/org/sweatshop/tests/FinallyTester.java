@@ -1,11 +1,11 @@
 package org.sweatshop.tests;
 
 public class FinallyTester {
-    
+
     private static final boolean returnTrue() {
         return true;
     }
-    
+
     public static void main(String[] args) throws Exception {
         try {
             if (returnTrue()) {

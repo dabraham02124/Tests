@@ -15,7 +15,7 @@ public class TimerExample extends TimerTask {
         TimerTask tt = new TimerExample();
         Timer t = new Timer(true);
         t.scheduleAtFixedRate(tt, new Date(), 1_000);
-        
+
         System.out.println("TimerTask started");
         //cancel after sometime
         try {

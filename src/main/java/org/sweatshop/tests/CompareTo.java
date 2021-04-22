@@ -6,5 +6,5 @@ public class CompareTo {
         Integer zero = new Integer(0);
         System.out.println(zero.compareTo(-15));
     }
-    
+
 }

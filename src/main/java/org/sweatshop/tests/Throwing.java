@@ -9,31 +9,31 @@ public class Throwing {
 
     public static void main(String[] args) {
         int num = 10_000_000;
-        
+
         Date d1 = new Date();
         System.out.println("about to throw UnsupportedOperationException");
         for (int i = 0; i < num; i++) {
             experiment1(new UnsupportedOperationException());
         }
-        
+
         Date d2 = new Date();
         System.out.println("\nabout to throw UnsupportedAddressTypeException");
         for (int i = 0; i < num; i++) {
             experiment1(new UnsupportedAddressTypeException());
         }
-        
+
         Date d3 = new Date();
         System.out.println("\nabout to throw UnsupportedOperationException");
         for (int i = 0; i < num; i++) {
             experiment2(new UnsupportedOperationException());
         }
-        
+
         Date d4 = new Date();
         System.out.println("\nabout to throw UnsupportedAddressTypeException");
         for (int i = 0; i < num; i++) {
             experiment2(new UnsupportedAddressTypeException());
         }
-        
+
         Date d5 = new Date();
         System.out.println(format("1 took %s, 2 took %s, 3 took %s, 4 took %s"
                 , d2.getTime() - d1.getTime()
@@ -79,5 +79,5 @@ public class Throwing {
             //this catch block intentionally left empty
         }
     }
-    
+
 }

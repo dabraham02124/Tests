@@ -13,10 +13,10 @@ public class PathsTest {
     private static final Path INNER_AF_CERTS = Paths.get("/root/").resolve(AF_CERTS);
     private static final Path INNER_AF_CERTS_WITH = ROOT_WITH.resolve(AF_CERTS);
     private static final Path INNER_AF_CERTS_WITHOUT = ROOT_WITHOUT.resolve(AF_CERTS);
-    
+
     public static void main(String[] args) {
         s2(ROOT_WITH);
-        
+
         s(AF_CERTS);
         s(ROOT_WITH);
         s(ROOT_WITHOUT);
@@ -24,7 +24,7 @@ public class PathsTest {
         s(INNER_AF_CERTS_WITH);
         s(INNER_AF_CERTS_WITHOUT);
     }
-    
+
     private static void s2(Path p) {
         Path p2 = p;
         try {
@@ -40,6 +40,6 @@ public class PathsTest {
     private static final void s(Path p) {
         System.out.println(p.toString());
     }
-    
-    
+
+
 }

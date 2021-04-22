@@ -10,7 +10,7 @@ public class Time {
         Date now = new Date();
         long ctm = System.currentTimeMillis();
         System.out.println(sdf.format(now));
-        System.out.println(sdf.format(now.getTime() + (1000L * 60 * 300))); 
+        System.out.println(sdf.format(now.getTime() + (1000L * 60 * 300)));
         System.out.println(ctm);
     }
 }

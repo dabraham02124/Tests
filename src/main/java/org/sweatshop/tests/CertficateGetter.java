@@ -19,9 +19,9 @@ import javax.net.ssl.X509TrustManager;
 
 public class CertficateGetter {
 
-    
+
   /**
-   * Returns the top level cert for a given server.  Should generally be called with "www.example.com" 
+   * Returns the top level cert for a given server.  Should generally be called with "www.example.com"
    * and 443.  Stolen flat out from http://www.xinotes.org/notes/note/1088/
    * @param host
    * @param port
@@ -34,7 +34,7 @@ public class CertficateGetter {
   public static X509Certificate getHostCertificate(String host, Integer port) throws IOException, CertificateException, NoSuchAlgorithmException, KeyManagementException {
       //get the cert chain
       java.security.cert.Certificate[] serverCerts = getHostCertificateChain(host, port);
-      
+
       //transform it into a 509 cert
       CertificateFactory cf = CertificateFactory.getInstance("X.509");
       X509Certificate x509Certificate = (X509Certificate) cf.generateCertificate(new ByteArrayInputStream(serverCerts[0].getEncoded()));
@@ -53,29 +53,27 @@ public class CertficateGetter {
       SSLContext sc = SSLContext.getInstance("SSL");
       sc.init(null, new TrustManager[] { trm }, null);
       SSLSocketFactory factory = sc.getSocketFactory();
-      
+
       //create the socket just enough to get the certs
       try (SSLSocket socket = (SSLSocket)factory.createSocket(host, port)) {
           socket.startHandshake();
           SSLSession session = socket.getSession();
           Certificate[] serverCerts = session.getPeerCertificates();
-          
+
 //          System.out.println("There are "+serverCerts.length+" certs in the chain");
 //          for (Certificate cert : serverCerts) {
 //              System.out.print("-----BEGIN CERTIFICATE-----\n");
 //              System.out.println(cert);
 //              System.out.print("\n-----END CERTIFICATE-----\n");
 //          }
-          
+
           return serverCerts;
       }
   }
-  
+
   public static void main(String[] args) throws CertificateException, IOException, KeyManagementException, NoSuchAlgorithmException {
       X509Certificate cert = getHostCertificate("www.sears.com", 443);
-      
       System.out.print(cert);
-
   }
 
 }

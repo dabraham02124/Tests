@@ -16,7 +16,7 @@ public class FitocracyXmlParser {
     public static void main(String[] args) throws SAXException, IOException {
         FitocracyXmlParser fxp = new FitocracyXmlParser();
         fxp.parse("/tmp/fito");
-        
+
     }
 
     private void parse(String filename) throws SAXException, IOException {
@@ -28,7 +28,7 @@ public class FitocracyXmlParser {
 
         //returns a Map (table) of names/values
         NamedNodeMap attributes = root.getAttributes();
-        
+
         System.out.format("%, %s", attribute, attributes);
     }
 

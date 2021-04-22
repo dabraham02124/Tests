@@ -13,7 +13,7 @@ public class StackTimings {
 
     public static void main(String[] args) {
         //this is here to get the jvm up and running so as to not affect the timings.
-        //without this, the 1 depth took _noticeably_ longer than the 10 or 100 
+        //without this, the 1 depth took _noticeably_ longer than the 10 or 100
         System.out.println(callLots(1000));
 
         final List<DepthAndDates> list = new ArrayList<>();
@@ -24,7 +24,7 @@ public class StackTimings {
         list.add(callLots(1_000));
         list.add(callLots(5_000));
         list.add(callLots(10_000));
-        
+
         System.out.println(format("\n\n\nStack Depth\t\tTime in MS for %s iterations", iterations));
         for (DepthAndDates d : list) {
             System.out.println(format("%s\t\t\t%s",d.getDepth(), d.getPod().getDiff()));
@@ -36,7 +36,7 @@ public class StackTimings {
         int depth;
         PairOfDates pod;
     }
-    
+
     private static DepthAndDates callLots(final int depth) {
         final Date d1 = new Date();
         for (int i = 0; i < iterations; i++) {
@@ -45,7 +45,7 @@ public class StackTimings {
         }
         return new DepthAndDates(depth, new PairOfDates(d1, new Date()));
     }
-    
+
     @Value
     private static class PairOfDates {
         Date d1;

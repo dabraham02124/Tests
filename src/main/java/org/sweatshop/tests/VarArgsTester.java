@@ -12,7 +12,7 @@ public class VarArgsTester {
 
     private static void printVarArgs(String sOne, String... args) {
         System.out.print(sOne+" ");
-        
+
         for (String arg : args) {
             System.out.print(arg+" ");
         }
@@ -25,7 +25,7 @@ public class VarArgsTester {
         for (int arg: args) {
             sb.append(",").append(arg);
         }
-        
+
         return sb.toString();
     }
 

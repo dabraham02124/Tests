@@ -1,20 +1,20 @@
 package org.sweatshop.tests;
 
 public class AddTwoLists {
-    
+
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);
-        
+
         ListNode l2 = new ListNode(5);
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
-        
+
         ListNode total = addTwoNumbers(l1, l2);
         System.out.println(total);
     }
-    
+
 
     public static class ListNode {
         int val;
@@ -42,7 +42,7 @@ public class AddTwoLists {
     }
 
     public static final int getVal(ListNode l) {
-        if (null == l) { 
+        if (null == l) {
             return 0;
         } else {
             return l.val;

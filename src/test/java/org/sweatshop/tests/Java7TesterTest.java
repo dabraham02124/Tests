@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class Java7TesterTest {
 
-//    uncomment the following two methods to test whether dependsOnMethods really skips a test when the dependsOn test fails. 
+//    uncomment the following two methods to test whether dependsOnMethods really skips a test when the dependsOn test fails.
 //    @Test
 //    public void bar() {
 //        throw new RuntimeException("Test not implemented");

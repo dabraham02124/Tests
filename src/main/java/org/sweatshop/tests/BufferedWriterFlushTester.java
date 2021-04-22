@@ -13,7 +13,7 @@ public class BufferedWriterFlushTester {
                 bw.write(i+"\n");
                 bw.flush();
             }
-            
+
         }
 
     }

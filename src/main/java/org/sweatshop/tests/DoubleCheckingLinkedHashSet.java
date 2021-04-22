@@ -17,16 +17,16 @@ public class DoubleCheckingLinkedHashSet {
         list.add(9);
         list.add(2);
         list.add(6);
-        
-        
+
+
         Set<Integer> set = new LinkedHashSet<>(list);
-        
+
         set.add(8);
         set.add(7);
-        
+
         for (int i : set) {
             System.out.println(i);
         }
     }
-    
+
 }

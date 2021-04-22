@@ -7,15 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CharValues {
-    
+
     public static void main(String[] args) throws IOException, InterruptedException {
         for (int i = 0; i < 255; i++) {
             System.out.println(format("%s = %s", i, (char) i));
         }
-        
+
         System.out.println((int)'/');
-        
-        
+
+
         List<String> commands = new ArrayList<String>();
 //        commands.add("/sbin/ping -o foo");
         commands.add("/sbin/ping -o localhost");

@@ -8,7 +8,7 @@ public class Return {
         public T getInter();
         public List<T> getInterList();
     }
-    
+
     public static class Impl implements Inter<Impl> {
 
         @Override
@@ -19,14 +19,14 @@ public class Return {
         @Override
         public List<Impl> getInterList() {
             return null;
-        }        
+        }
     }
-    
-    
+
+
     public static void main(String[] args) {
         Impl impl = new Impl();
         System.out.println(impl);
-        
+
         Inter<Impl> inter = new Impl();
         Impl i2 = (Impl) inter;
         Object o = null;

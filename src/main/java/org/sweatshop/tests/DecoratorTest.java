@@ -25,7 +25,7 @@ public class DecoratorTest {
         run(1_000_000);
         run(10_000_000);
     }
-    
+
     public static void run(int max) {
 
         Date d1 = new Date();

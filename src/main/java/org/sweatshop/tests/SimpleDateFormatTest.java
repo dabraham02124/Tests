@@ -9,5 +9,5 @@ public class SimpleDateFormatTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
         System.out.println(sdf.format(new Date()));
     }
-    
+
 }

@@ -3,8 +3,8 @@ package org.sweatshop.tests;
 public class TrailingSlashEnsurer {
 
     /**
-     * given any non-null, non-empty string, That string will be returned with a trailing slash at the 
-     * end.  If there is already one there, this will not duplicate it. 
+     * given any non-null, non-empty string, That string will be returned with a trailing slash at the
+     * end.  If there is already one there, this will not duplicate it.
      * @param sIn
      * @return
      */

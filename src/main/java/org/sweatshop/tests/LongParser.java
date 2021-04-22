@@ -9,7 +9,7 @@ public class LongParser {
         System.out.println(new Long(86400 * 1000 * 365 * 2));
         System.out.println(new Long(86400l * 1000 * 365 * 2));
     }
-    
+
     private static Long parseString(String sIn) {
         try {
         System.out.print(sIn+" = ");

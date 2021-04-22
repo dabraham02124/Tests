@@ -9,7 +9,7 @@ import io.vavr.collection.Set;
 public class RandomSetGenerator {
 
     public static Set<Integer> createSet(long seed, int size, int range) {
-        Random random = new Random(seed); 
+        Random random = new Random(seed);
         return HashSet.fill(size, (() -> Math.floorMod(random.nextInt(), range)));
     }
 

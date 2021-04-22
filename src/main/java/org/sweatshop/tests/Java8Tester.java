@@ -17,7 +17,7 @@ public class Java8Tester {
         stringList.add("quuux");
         return Collections.unmodifiableList(stringList);
     }
-    
+
     private static List<Integer> createIntegerList() {
         List<Integer> intList = new LinkedList<>();
         intList.add(5);
@@ -39,7 +39,7 @@ public class Java8Tester {
         mapTester();System.out.println();
         alterListInPlace();System.out.println();
     }
-    
+
     private static void alterListInPlace() {
         List<String> stringList = new LinkedList<>();
         createStringList().forEach(s -> stringList.add(s));
@@ -51,7 +51,7 @@ public class Java8Tester {
         System.out.println(createIntegerList().stream().map(i -> i*i).collect(Collectors.toList()));
 
     }
-    
+
     private static void filterTester() {
         createStringList().stream().filter(s -> s.length() > 3).forEach(s -> System.out.println(s));
     }

@@ -13,7 +13,7 @@ public class Synchronized {
             System.out.println(new Date().getTime() - d.getTime());
         }
     }
-    
+
     @Value
     @EqualsAndHashCode(callSuper=false)
     private static class MyThread extends Thread {
@@ -27,7 +27,7 @@ public class Synchronized {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         Date d = new Date();
         new MyThread(d).start();

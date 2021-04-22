@@ -70,7 +70,7 @@ public class CertBasedJdbc {
         // See https://jdbc.postgresql.org/documentation/head/logging.html for details
 //        props.setProperty("loggerLevel","TRACE");
 
-        // If the above doesn't do it and you need to debug the ssl handshake, uncomment these lines.  
+        // If the above doesn't do it and you need to debug the ssl handshake, uncomment these lines.
         // It gives WAY too much detail, but I couldn't find anything better...
 //             System.setProperty("javax.net.debug", "all");
 //             props.setProperty("loglevel", "2");

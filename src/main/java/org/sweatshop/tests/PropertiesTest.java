@@ -9,7 +9,7 @@ import java.util.Properties;
 public class PropertiesTest {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        
+
         File f = new File(".");
         System.out.println(f.getAbsolutePath());
         Properties p = new Properties();
@@ -17,5 +17,5 @@ public class PropertiesTest {
         System.out.println(p.getProperty("foo"));
         System.out.println("got to the end");
     }
-    
+
 }

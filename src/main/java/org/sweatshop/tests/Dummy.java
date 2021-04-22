@@ -60,7 +60,7 @@ public class Dummy {
 
         test2+="0";
         testLength(test2);
-        
+
         String foo[] = {"a", "b"};
         List<String> bar = new LinkedList<String>(Arrays.asList(foo));
         System.out.println(bar);

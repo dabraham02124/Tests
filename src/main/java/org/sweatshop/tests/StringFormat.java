@@ -11,7 +11,7 @@ public class StringFormat {
         System.out.println(format("this is a null %s", returnNull()));
         System.out.println(format("This is too many variables %s",1,2,3,4));
     }
-    
+
     private static Object returnNull() {
         return null;
     }

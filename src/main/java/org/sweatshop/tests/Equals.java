@@ -9,11 +9,11 @@ public class Equals {
         Integer foo;
         String bar;
     }
-    
+
     public static void main(String[] args) {
         Foo foo1 = new Foo(5, "five");
         Foo foo2 = new Foo(5, "five");
-        
+
         if (foo1.equals(foo2)) {
             System.out.println("foo1 equals foo2");
         } else {

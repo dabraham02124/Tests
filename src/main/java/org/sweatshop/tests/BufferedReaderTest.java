@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class BufferedReaderTest {
 
-    
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         for (String line = br.readLine(); line != null; line = br.readLine()) {
@@ -14,5 +14,5 @@ public class BufferedReaderTest {
         }
         System.out.println("you're done");
     }
-    
+
 }

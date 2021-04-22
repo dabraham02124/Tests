@@ -13,14 +13,14 @@ public class LogbackTest {
         log.error("this line has too many variables and should stop at \"beta\" {} {}", "alpha", "beta", "gamma");
         log.error("this line has too many curly pairs and should have an extra after \"beta\" {} {} {}", "alpha", "beta");
         log.error("passing in a StringWriter {}", getSW());
-        log.error("passing in a null {}", (StringWriter)null); 
-        
+        log.error("passing in a null {}", (StringWriter)null);
+
         Exception e = getException(3);
         log.error("the following line has no text, but takes an exception");
         log.error("", e);
         log.error("the following line has one curly pair, and takes two variables, the second is an exception");
         log.error("foo = {}", "bar", e);
-        
+
         getLogLambda().accept("alpha {}", "beta");
     }
 
