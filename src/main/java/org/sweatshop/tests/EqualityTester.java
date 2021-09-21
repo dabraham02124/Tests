@@ -1,9 +1,9 @@
 package org.sweatshop.tests;
 
 public class EqualityTester {
-    
+
     private String foo;
-    
+
     public void blah(EqualityTester eq) {
         eq.foo = "bla";
         System.out.println(eq.foo);

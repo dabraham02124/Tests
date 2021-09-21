@@ -3,7 +3,7 @@ package org.sweatshop.tests.annotation;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
-import org.sweatshop.tests.annotation.NullValueValidate;
+//import org.sweatshop.tests.annotation.NullValueValidate;
 
 /**
  * The class file to actually carry out the validations

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/*
 /target/
 /.gradle
@@ -5,3 +6,5 @@ target/*
 /build
 /local
 /test-output
+.classpath
+.project

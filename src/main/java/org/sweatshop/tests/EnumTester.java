@@ -6,12 +6,12 @@ public class EnumTester {
         ALPHA,
         BETA,
         GAMMA;
-        
-        public String toString() {
+
+        @Override public String toString() {
             return "aooga";
         }
     }
-    
+
     public static void main(String[] args) {
         for (EnumType e : EnumType.values()) {
             System.out.println("toString = "+e.toString());
@@ -19,8 +19,8 @@ public class EnumTester {
             System.out.println("valueOf = "+String.valueOf(e));
             System.out.println();
         }
-        
+
     }
-    
-    
+
+
 }

@@ -10,5 +10,5 @@ public class ExceptionTester {
             System.out.println(e.getMessage());
         }
     }
-    
+
 }

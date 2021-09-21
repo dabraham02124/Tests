@@ -3,12 +3,12 @@ package org.sweatshop.tests;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import org.sweatshop.tests.Java7Tester;
+//import org.sweatshop.tests.Java7Tester;
 import org.testng.annotations.Test;
 
 public class Java7TesterTest {
 
-//    uncomment the following two methods to test whether dependsOnMethods really skips a test when the dependsOn test fails. 
+//    uncomment the following two methods to test whether dependsOnMethods really skips a test when the dependsOn test fails.
 //    @Test
 //    public void bar() {
 //        throw new RuntimeException("Test not implemented");

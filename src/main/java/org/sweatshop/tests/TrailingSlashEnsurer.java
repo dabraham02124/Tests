@@ -3,8 +3,8 @@ package org.sweatshop.tests;
 public class TrailingSlashEnsurer {
 
     /**
-     * given any non-null, non-empty string, That string will be returned with a trailing slash at the 
-     * end.  If there is already one there, this will not duplicate it. 
+     * given any non-null, non-empty string, That string will be returned with a trailing slash at the
+     * end.  If there is already one there, this will not duplicate it.
      * @param sIn
      * @return
      */
@@ -21,7 +21,7 @@ public class TrailingSlashEnsurer {
         System.out.println(ensureTrailingSlash(""));
         System.out.println(ensureTrailingSlash("/"));
         System.out.println(ensureTrailingSlash("f"));
-        System.out.println(ensureTrailingSlash(" "));;
+        System.out.println(ensureTrailingSlash(" "));
         System.out.println(ensureTrailingSlash("foo"));
         System.out.println(ensureTrailingSlash("foo/"));
         System.out.println(ensureTrailingSlash("foo/bar"));

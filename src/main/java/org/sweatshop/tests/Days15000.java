@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 
 public class Days15000 {
 
-    
+
     public static void main(String[] args) throws ParseException {
         Calendar c = new GregorianCalendar(1973, 01, 03);
         c.add(Calendar.DATE, 15_000);

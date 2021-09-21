@@ -1,0 +1,28 @@
+<configuration scan="true" scanPeriod="10 seconds" >
+
+  <appender name="FILE" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- <file>/tmp/main.log</file> -->
+    <!-- <append>true</append> -->
+    <encoder>
+      <pattern>%level: %thread [%date{yyyy-MM-dd HH:mm:ss zzz}] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="FILE2" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- This filter will permit log events of the level listed or higher -->
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>ERROR</level>
+    </filter>
+    <!-- <file>/tmp/error.log</file> -->
+    <!-- <append>true</append> -->
+    <encoder>
+      <pattern>%level: %thread [%date{yyyy-MM-dd HH:mm:ss zzz}] %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="FILE" />
+    <!-- <appender-ref ref="FILE2" /> -->
+  </root>
+
+</configuration>

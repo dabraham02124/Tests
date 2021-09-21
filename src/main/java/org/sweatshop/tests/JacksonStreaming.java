@@ -20,10 +20,10 @@ public class JacksonStreaming {
         int intVal;
         String stringVal;
     }
-    
+
     private static class ToStreamSerializer extends JsonSerializer<ToStream> {
         @Override
-        public void serialize(ToStream value, JsonGenerator jgen, SerializerProvider provider) 
+        public void serialize(ToStream value, JsonGenerator jgen, SerializerProvider provider)
           throws IOException, JsonProcessingException {
             jgen.writeStartObject();
             jgen.writeNumberField("id", value.getIntVal());
@@ -38,7 +38,7 @@ public class JacksonStreaming {
 //        module.addSerializer(ToStream.class, new ToStreamSerializer());
 //        mapper.registerModule(module);
         mapper.writeValue(new BufferedWriter(new OutputStreamWriter(System.out)), ts);
-        
+
 //        JsonFactory factory = new JsonFactory();
 //        JsonGenerator jg = factory.createGenerator(System.out);
 //        jg.writeObject(ts);
