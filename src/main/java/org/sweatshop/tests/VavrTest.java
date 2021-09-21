@@ -21,7 +21,7 @@ public class VavrTest {
 //        List<Address> addresses;
 //
 //        public boolean hasAddress() { return 0 != addresses.length(); }
-//        
+//
 //    };
 //    @Unapply
 //    static Tuple2<String, List<Address>> Person(Person p) {
@@ -45,13 +45,13 @@ public class VavrTest {
 //        for (String s : iterator) {
 //            System.out.println(s);
 //        }
-//        
+//
 //        for (int i = 0; i < 5; i++) {
 //            System.out.print(i+ " -> ");
 //            testMatch(i);
 //        }
-//        
-//        
+//
+//
 //        List<Integer> ints = List.ofAll(1,2,3,4);
 //        int total = ints.fold(0, Integer::sum);
 //        System.out.println(total);
@@ -85,31 +85,31 @@ public class VavrTest {
 //                new Person("betty",List.empty())
 //                );
 //    }
-//    
-//    
+//
+//
 //    @Unapply
 //    static Tuple3<Integer, Integer, Integer> LocalDate(LocalDate date) {
 //        return Tuple.of(
 //          date.getYear(), date.getMonthValue(), date.getDayOfMonth());
 //    }
-//    
-//    
-//    
+//
+//
+//
 //
 ////    public void givenObject_whenDecomposesVavrWay_thenCorrect2() {
 ////        LocalDate date = LocalDate.of(2017, 2, 13);
-////     
+////
 ////        String result = Match(date).of(
-////          Case(LocalDate($(2016), $(3), $(13)), 
+////          Case(LocalDate($(2016), $(3), $(13)),
 ////            () -> "2016-02-13"),
 ////          Case(LocalDate($(2016), $(), $()),
 ////            (y, m, d) -> "month " + m + " in 2016"),
-////          Case(LocalDate($(), $(), $()),  
+////          Case(LocalDate($(), $(), $()),
 ////            (y, m, d) -> "month " + m + " in " + y),
-////          Case($(), 
+////          Case($(),
 ////            () -> "(catch all)")
 ////        );
-////     
+////
 ////    }
     static Option<String> some = Option.of("foo");
     static Option<String> none = Option.none();
@@ -167,8 +167,8 @@ public class VavrTest {
         }
 
         LinkedHashMultimap<String, String> mm = LinkedHashMultimap.withSet().of(
-                "NYC", "BOS", 
-                "NYC", "LAX", 
+                "NYC", "BOS",
+                "NYC", "LAX",
                 "BOS", "IAD");
         for (String key : mm.keySet()) {
             System.out.println(key + " -> " +makePrettyString(getList(mm, key)));
@@ -185,6 +185,5 @@ public class VavrTest {
     public static List<String> getList(Multimap<String, String> mm, String key) {
         return mm.get(key).get().toList();
     }
-
 
 }

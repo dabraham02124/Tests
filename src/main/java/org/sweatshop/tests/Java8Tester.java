@@ -30,7 +30,7 @@ public class Java8Tester {
 
 
     private static void forEachTester() {
-        createIntegerList().forEach((a) -> System.out.println(a*a));
+        createIntegerList().forEach(a -> System.out.println(a*a));
     }
 
     public static void main(String[] args) {

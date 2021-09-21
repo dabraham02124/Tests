@@ -10,6 +10,14 @@ public class SubstringTester {
         System.out.println(safeTruncateString(test, 4));
         System.out.println(safeTruncateString(test, 5));
         System.out.println(safeTruncateString(test, 6));
+        
+        
+        System.out.println(replaceSubstring("Dorian hates anime", "hate", "love"));
+        System.out.println(replaceSubstring("Dorian likes anime", "hate", "love"));
+        System.out.println(replaceSubstring(null, "hate", "love"));
+        System.out.println(replaceSubstring("Dorian hates anime", null, "love"));
+        System.out.println(replaceSubstring("Dorian hates anime", "hate", null));
+
     }
 
     private static String safeTruncateString(String string, int length) {
@@ -19,4 +27,18 @@ public class SubstringTester {
             return string.substring(0, length);
         }
     }
+    
+    private static String replaceSubstring(String in, String replaced, String replacement) {
+        if (null == in || null == replaced) {
+            return in;
+        } else {
+            int index = in.indexOf(replaced);
+            if (-1 == index) {
+                return in;
+            } else {
+                return in.substring(0, index) + replacement + in.substring(index + replaced.length());
+            }
+        }
+    }
+    
 }
