@@ -1,1 +1,7 @@
 target/*
+/target/
+/.gradle
+/.settings
+/build
+/local
+/test-output
