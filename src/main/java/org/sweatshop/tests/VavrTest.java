@@ -116,6 +116,7 @@ public class VavrTest {
 
     public static void main(String[] args) {
         multiMapTest();
+        flatMapTest();
 //        System.out.println("fred " + getValue(Option.of(new IntHolder(15))));
 //        System.out.println("barney " + getValue(Option.none()));
 //
@@ -139,6 +140,20 @@ public class VavrTest {
 //            System.out.println(either.right().get());
 //        }
 //        System.out.println("XXXXXXXXXXXXX");
+    }
+
+    private static void flatMapTest() {
+        System.out.println(List.range(1, 4).flatMap(i -> lists(i)));
+    }
+
+    private static List<Integer> lists(Integer i) {
+        switch(i) {
+            case 1: return List.of(1);
+            case 2: return List.of(2,2);
+            case 3: return List.of(3,3,3);
+            case 4: return List.of(4,4,4,4);
+        }
+        return null;
     }
 
     public static int syso(String s) {
